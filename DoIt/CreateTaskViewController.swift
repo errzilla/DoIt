@@ -11,17 +11,33 @@ import UIKit
 class CreateTaskViewController: UIViewController {
 
     
-    @IBAction func addTaskButton(_ sender: Any) {
-    }
-    @IBOutlet var importantSwitch: UIView!
+    @IBOutlet weak var importantSwitch: UISwitch!
     @IBOutlet weak var taskNameText: UITextField!
     
+    var previousViewControler = TasksViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
+    
+    @IBAction func addTaskButton(_ sender: Any) {
+        
+        //Create a Task from the outlet information
+        let task = Task()
+        task.name  = taskNameText.text!
+        task.important = importantSwitch.isOn
+        
+        //Add new task to array in previous viewController
+        
+        previousViewControler.tasks.append(task)
+        previousViewControler.tableView.reloadData()
+        navigationController!.popViewController(animated: true)
+        
+    }
+    
+        
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -13,7 +13,7 @@
         <!--Do It-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="DoIt" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="TasksViewController" customModule="DoIt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -78,11 +78,11 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="lES-cz-lEr">
                                 <rect key="frame" x="163" y="201" width="51" height="31"/>
                             </switch>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rL0-lJ-Dw5">
-                                <rect key="frame" x="172.5" y="262" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h0S-0W-bhc">
+                                <rect key="frame" x="172" y="262" width="30" height="30"/>
                                 <state key="normal" title="Add"/>
                                 <connections>
-                                    <action selector="addTaskButton:" destination="cXc-Nm-5DF" eventType="touchUpInside" id="6hw-CO-iwP"/>
+                                    <action selector="addTaskButton:" destination="cXc-Nm-5DF" eventType="touchUpInside" id="szP-mg-1Hc"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -91,20 +91,19 @@
                             <constraint firstItem="lES-cz-lEr" firstAttribute="top" secondItem="E7j-cW-bTB" secondAttribute="bottom" constant="10" id="G7b-B4-dTA"/>
                             <constraint firstItem="jq6-dJ-YiM" firstAttribute="leading" secondItem="W7N-wg-bUM" secondAttribute="leading" constant="40" id="Jm4-Jz-2vj"/>
                             <constraint firstItem="lES-cz-lEr" firstAttribute="centerX" secondItem="Eej-tx-ree" secondAttribute="centerX" id="TCN-UL-y9Y"/>
+                            <constraint firstItem="h0S-0W-bhc" firstAttribute="centerX" secondItem="Eej-tx-ree" secondAttribute="centerX" id="V8o-Ff-9YX"/>
                             <constraint firstItem="IJ0-eX-QTh" firstAttribute="top" secondItem="W7N-wg-bUM" secondAttribute="top" constant="15" id="Wcn-JJ-jTm"/>
+                            <constraint firstItem="h0S-0W-bhc" firstAttribute="top" secondItem="lES-cz-lEr" secondAttribute="bottom" constant="30" id="XMb-IR-WYu"/>
                             <constraint firstItem="E7j-cW-bTB" firstAttribute="centerX" secondItem="Eej-tx-ree" secondAttribute="centerX" id="dNz-XJ-Qy5"/>
-                            <constraint firstItem="rL0-lJ-Dw5" firstAttribute="top" secondItem="lES-cz-lEr" secondAttribute="bottom" constant="30" id="esk-XL-JIi"/>
                             <constraint firstItem="E7j-cW-bTB" firstAttribute="top" secondItem="jq6-dJ-YiM" secondAttribute="bottom" constant="30" id="kBL-0Z-NdG"/>
                             <constraint firstItem="jq6-dJ-YiM" firstAttribute="top" secondItem="IJ0-eX-QTh" secondAttribute="bottom" constant="10" id="pXA-EG-XZd"/>
                             <constraint firstItem="W7N-wg-bUM" firstAttribute="trailing" secondItem="jq6-dJ-YiM" secondAttribute="trailing" constant="40" id="q9M-B5-i8x"/>
                             <constraint firstItem="IJ0-eX-QTh" firstAttribute="centerX" secondItem="Eej-tx-ree" secondAttribute="centerX" id="sFV-hj-1qa"/>
-                            <constraint firstItem="rL0-lJ-Dw5" firstAttribute="centerX" secondItem="Eej-tx-ree" secondAttribute="centerX" id="xtH-Ue-gX3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="W7N-wg-bUM"/>
                     </view>
                     <connections>
-                        <outlet property="addTaskButton" destination="rL0-lJ-Dw5" id="i8D-3h-Ix0"/>
-                        <outlet property="importantSwitch" destination="Eej-tx-ree" id="kHT-2J-iX7"/>
+                        <outlet property="importantSwitch" destination="lES-cz-lEr" id="Pfw-vB-5fp"/>
                         <outlet property="taskNameText" destination="jq6-dJ-YiM" id="3Ct-OJ-bKd"/>
                     </connections>
                 </viewController>

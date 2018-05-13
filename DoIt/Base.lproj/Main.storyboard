@@ -49,16 +49,64 @@
             </objects>
             <point key="canvasLocation" x="132" y="53"/>
         </scene>
-        <!--View Controller-->
+        <!--Create Task View Controller-->
         <scene sceneID="edd-vb-Y4t">
             <objects>
-                <viewController id="cXc-Nm-5DF" sceneMemberID="viewController">
+                <viewController id="cXc-Nm-5DF" customClass="CreateTaskViewController" customModule="DoIt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Eej-tx-ree">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJ0-eX-QTh">
+                                <rect key="frame" x="162.5" y="79" width="50" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jq6-dJ-YiM">
+                                <rect key="frame" x="40" y="110" width="295" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Important:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E7j-cW-bTB">
+                                <rect key="frame" x="147.5" y="170" width="80" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="lES-cz-lEr">
+                                <rect key="frame" x="163" y="201" width="51" height="31"/>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rL0-lJ-Dw5">
+                                <rect key="frame" x="172.5" y="262" width="30" height="30"/>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addTaskButton:" destination="cXc-Nm-5DF" eventType="touchUpInside" id="6hw-CO-iwP"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lES-cz-lEr" firstAttribute="top" secondItem="E7j-cW-bTB" secondAttribute="bottom" constant="10" id="G7b-B4-dTA"/>
+                            <constraint firstItem="jq6-dJ-YiM" firstAttribute="leading" secondItem="W7N-wg-bUM" secondAttribute="leading" constant="40" id="Jm4-Jz-2vj"/>
+                            <constraint firstItem="lES-cz-lEr" firstAttribute="centerX" secondItem="Eej-tx-ree" secondAttribute="centerX" id="TCN-UL-y9Y"/>
+                            <constraint firstItem="IJ0-eX-QTh" firstAttribute="top" secondItem="W7N-wg-bUM" secondAttribute="top" constant="15" id="Wcn-JJ-jTm"/>
+                            <constraint firstItem="E7j-cW-bTB" firstAttribute="centerX" secondItem="Eej-tx-ree" secondAttribute="centerX" id="dNz-XJ-Qy5"/>
+                            <constraint firstItem="rL0-lJ-Dw5" firstAttribute="top" secondItem="lES-cz-lEr" secondAttribute="bottom" constant="30" id="esk-XL-JIi"/>
+                            <constraint firstItem="E7j-cW-bTB" firstAttribute="top" secondItem="jq6-dJ-YiM" secondAttribute="bottom" constant="30" id="kBL-0Z-NdG"/>
+                            <constraint firstItem="jq6-dJ-YiM" firstAttribute="top" secondItem="IJ0-eX-QTh" secondAttribute="bottom" constant="10" id="pXA-EG-XZd"/>
+                            <constraint firstItem="W7N-wg-bUM" firstAttribute="trailing" secondItem="jq6-dJ-YiM" secondAttribute="trailing" constant="40" id="q9M-B5-i8x"/>
+                            <constraint firstItem="IJ0-eX-QTh" firstAttribute="centerX" secondItem="Eej-tx-ree" secondAttribute="centerX" id="sFV-hj-1qa"/>
+                            <constraint firstItem="rL0-lJ-Dw5" firstAttribute="centerX" secondItem="Eej-tx-ree" secondAttribute="centerX" id="xtH-Ue-gX3"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="W7N-wg-bUM"/>
                     </view>
+                    <connections>
+                        <outlet property="addTaskButton" destination="rL0-lJ-Dw5" id="i8D-3h-Ix0"/>
+                        <outlet property="importantSwitch" destination="Eej-tx-ree" id="kHT-2J-iX7"/>
+                        <outlet property="taskNameText" destination="jq6-dJ-YiM" id="3Ct-OJ-bKd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uQT-bf-sO5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

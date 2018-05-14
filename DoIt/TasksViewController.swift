@@ -9,14 +9,13 @@
 import UIKit
 
 class TasksViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
-
+    
     @IBOutlet weak var tableView: UITableView!
     
     var tasks : [Task] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
         tasks = makeTasks()
         
@@ -34,17 +33,20 @@ class TasksViewController: UIViewController, UITableViewDataSource, UITableViewD
         let task = tasks[indexPath.row]
         
         if task.important{
-             cell.textLabel?.text = "‼️ \(task.name)!"
+            cell.textLabel?.text = "‼️ \(task.name)!"
         }
         else{
-             cell.textLabel?.text = "  \(task.name)"
+            cell.textLabel?.text = "  \(task.name)"
         }
-        
-       
         
         return cell
     }
-
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let task = tasks[indexPath.row]
+        performSegue(withIdentifier: "selectTaskSegue", sender: task)
+    }
+    
     func makeTasks() -> [Task]{
         let task0 = Task()
         task0.name = "Walk the dog"
@@ -64,12 +66,17 @@ class TasksViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     @IBAction func plusTapped(_ sender: Any) {
         performSegue(withIdentifier: "addSegue", sender: nil)
-    
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let nextViewController = segue.destination as! CreateTaskViewController
-        nextViewController.previousViewControler = self
+        
+        if segue.identifier == "addSegue"{
+            let nextViewController = segue.destination as! CreateTaskViewController
+            nextViewController.previousViewControler = self
+        }
+        if segue.identifier == "selectTaskSegue"{
+            let nextViewController = segue.destination as! CompleteTaskViewController
+            nextViewController.task = sender as! Task
+        }
     }
-    
 }

@@ -34,10 +34,7 @@ class CreateTaskViewController: UIViewController {
         previousViewControler.tasks.append(task)
         previousViewControler.tableView.reloadData()
         navigationController!.popViewController(animated: true)
-        
     }
-    
-        
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

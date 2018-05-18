@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		624267D920AF1FFD0001119E /* CompleteTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624267D820AF1FFD0001119E /* CompleteTaskViewController.swift */; };
 		626679F120A8A2CF003D9A77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626679F020A8A2CF003D9A77 /* AppDelegate.swift */; };
 		626679F320A8A2CF003D9A77 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626679F220A8A2CF003D9A77 /* TasksViewController.swift */; };
 		626679F620A8A2CF003D9A77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 626679F420A8A2CF003D9A77 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		624267D820AF1FFD0001119E /* CompleteTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteTaskViewController.swift; sourceTree = "<group>"; };
 		626679ED20A8A2CF003D9A77 /* DoIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		626679F020A8A2CF003D9A77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		626679F220A8A2CF003D9A77 /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				626679F020A8A2CF003D9A77 /* AppDelegate.swift */,
 				62667A0520A8A7F4003D9A77 /* Task.swift */,
 				626679F220A8A2CF003D9A77 /* TasksViewController.swift */,
+				624267D820AF1FFD0001119E /* CompleteTaskViewController.swift */,
 				62667A0720A8AF9F003D9A77 /* CreateTaskViewController.swift */,
 				626679F420A8A2CF003D9A77 /* Main.storyboard */,
 				626679FA20A8A2D0003D9A77 /* Assets.xcassets */,
@@ -146,6 +149,7 @@
 			files = (
 				62667A0620A8A7F4003D9A77 /* Task.swift in Sources */,
 				626679F920A8A2CF003D9A77 /* DoIt.xcdatamodeld in Sources */,
+				624267D920AF1FFD0001119E /* CompleteTaskViewController.swift in Sources */,
 				626679F320A8A2CF003D9A77 /* TasksViewController.swift in Sources */,
 				626679F120A8A2CF003D9A77 /* AppDelegate.swift in Sources */,
 				62667A0820A8AF9F003D9A77 /* CreateTaskViewController.swift in Sources */,
